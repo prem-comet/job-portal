@@ -1,12 +1,11 @@
-// Import with `import * as Sentry from "@sentry/node"` if you are using ESM
-import * as Sentry from "@sentry/node"
-
+import * as Sentry from "@sentry/node";
+// Ensure to call this before importing any other modules!
 Sentry.init({
-  dsn: "https://d42b6b8fc5d73070b7726f30b097ba00@o4510160514121728.ingest.us.sentry.io/4510160521330688",
-  // Setting this option to true will send default PII data to Sentry.
-  // For example, automatic IP address collection on events
+  dsn: "https://a6f25fb0e17077d9fd5089476e192271@o4510193126473728.ingest.us.sentry.io/4510193132699648",
 
-    integrations: [Sentry.mongooseIntegration()],
+  integrations: [Sentry.mongooseIntegration()],
 
+  // Adds request headers and IP for users, for more info visit:
+  // https://docs.sentry.io/platforms/javascript/guides/node/configuration/options/#sendDefaultPii
   sendDefaultPii: true,
 });

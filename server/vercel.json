@@ -1,4 +1,4 @@
-  {
+{
     "version": 2,
     "builds": [
         {
@@ -12,6 +12,17 @@
         }
     ],
     "routes": [
+        {
+            "src": "/api/webhooks/clerk",
+            "dest": "server.js",
+            "headers": {
+                "x-verifies-webhook": "true"
+            },
+            "continue": true,
+            "config": {
+                "bodyParser": false 
+            }
+        },
         {
             "src": "/(.*)",
             "dest": "server.js"
