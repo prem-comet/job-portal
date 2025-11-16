@@ -16,7 +16,7 @@
             "src": "/api/webhooks/clerk",
             "dest": "server.js",
             "headers": {
-                "x-verifies-webhook": "true"
+                "x-verify-webhook": "true"
             },
             "continue": true,
             "config": {
