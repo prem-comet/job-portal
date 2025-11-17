@@ -18,10 +18,8 @@
             "headers": {
                 "x-verify-webhook": "true"
             },
-            "continue": true,
-            "config": {
-                "bodyParser": false 
-            }
+             "continue": true,
+            "methods": ["POST"]
         },
         {
             "src": "/(.*)",
