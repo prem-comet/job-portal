@@ -13,9 +13,11 @@
     ],
     "routes": [
         {
-            "src": "/webhooks",
+            "src": "/api/webhooks/clerk",
             "dest": "server.js",
-            "methods": ["POST"],
+            "headers": {
+                "x-verify-webhook": "true"
+            },
             "continue": true,
             "config": {
                 "bodyParser": false 
